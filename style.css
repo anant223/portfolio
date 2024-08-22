@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+  font-family: calibri;
+  src: url('./fonts/calibri.ttf');
+}
+@font-face {
+  font-family: my-font;
+  src: url("./fonts/nd_logos/ND\ LOGOS\ REGULAR.ttf");
+}
+*{margin: 0;padding: 0;box-sizing:border-box;}
+body{
+  color: #fff;
+  margin: 0; 
+  padding: 0;
+  font-family: "Bebas Neue";
+  background-color: rgb(30, 32, 40);
+  scroll-behavior: smooth;
+
+}
+/* header-section */
+.site-header li, a{
+  text-decoration: none;
+  list-style: none;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: -.5px;
+  
+}
+.site-header{
+  padding: 2.5rem 0;
+}
+
+.header-wrapper{
+  margin: 0 auto;
+  max-width: 85rem;
+  padding: 0 .5rem;
+}
+.logo{
+  font-size: 1.8em;
+  font-weight: 100;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height:  56px;
+}
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.navigation{
+  width: 160px;
+  height: 56px;
+  border-radius: 34px;
+  box-shadow:  rgb(238, 235, 235) 18px 1.15em 19.19em, rgba(133, 131, 131, 0.365) 0px 0px 0px 2px inset;
+  font-size: 1em;
+  line-height: 1.5rem;
+  position: relative;
+}
+
+.items{
+  border: 1px solid gray;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 26px;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2.5rem;
+  background-color:rgba(238, 235, 235, 0.119) ;    
+  backdrop-filter: blur(3px);
+  -webkit-text-size-adjust: 100%;
+  text-align: center;
+  font-family: "Poppins";
+  
+}
+.social-contact{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  height: 56px;
+}
+.social-contact span a{
+  font-size: large;
+  font-family: "Bebas Neue";
+    font-family: "Poppins";
+
+}
+.social-contact span a:hover{
+   color: rgb(214, 212, 212);
+   text-decoration: underline;
+}
+
+.main-layout{
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+/* hero-section */
+.hero-section,.about-section, .contact-section, .projects-section{
+  width: 100%;
+  color: silver;
+}
+.hero-section {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 2rem;
+  padding-top: 8rem;
+  text-align: center;
+  font-family: "Poppins"; 
+
+}
+
+.all-about-me h1{
+  margin: 0 auto;
+  max-width: 56rem;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.decorative-text{
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  max-width: 42rem;
+  font-size: 23px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.00217em;
+}
+
+.group-btn{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.expo-btn{
+  margin-top: 2.5rem;
+}
+.expo-btn a{
+  border: 1px solid silver;
+  padding: 10px 40px;
+  border-radius: 20px;
+}
+
+.expo-btn a:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: background-color .3s ease-in;
+}
+
+.tech-stack-heading{
+  font-size: larger;
+  padding: .8rem 0;
+  font-family: "Poppins"; 
+  display: flex;
+}
+.my-tools{
+  margin-top: 18rem;
+  /* margin-bottom: 4rem; */
+}
+
+.tech-stack {
+  display: flex;
+  gap: 24px;
+}
+.skills-container{
+  max-width: 410px;
+  max-height: 120px;
+  overflow: hidden;
+}
+.skill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#0d101b;
+  background-color: rgb(42, 45, 56);
+  width: 6rem;
+  height: 2.4rem;
+  color: #dadada;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px #29292b40,
+  2px 3px 3px #111822ab,
+  2px 5px 5px #11182232,
+  2px 8px 8px #11182241;
+}
+
+
+.tech-stack-container[data-animated]{
+  overflow: hidden;
+}
+.tech-stack-container[data-animated] .list{
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+  to{
+    translate: calc(-50% - 5px);
+  }
+}
+svg{
+  position: relative;
+  top: 3px;
+  right: 4px;
+}
+.social-contact a{
+  font-size: 1rem;
+}
+
+.about-section, .projects-section, .contact-section{
+  padding: 24px 68px;
+}
+.projects-section{
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  color: #ffffff;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: #dadada 24px 0;
+}
+
+.projects-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.projects{
+  display: flex;
+  flex-direction: column;
+}
+.project{
+  padding: 2.5em 1em;
+  display: flex;
+  align-items: center;
+  border-top:2px solid #333;
+  line-height: 100%;
+  cursor: pointer;
+  font-size: 1.05em;
+}
+.project > div{
+  flex: 1;
+}
+
+.desc p{
+  text-align: justify;
+}
+
+.project-name,.sr-no{
+  font-size: 2vw;
+}
+.preview{
+  position: relative;
+}
+
+img{
+  position: absolute;
+  height: 25vh;
+  opacity: 0;
+  z-index: -1;
+  /* transform: scale(.80); */
+  transition: all linear 0.1s;
+}
+
+.about-section{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.about-wrapper{
+  width: 100%;
+  /* background-color: blue; */
+}
+.who-am-i{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.who-am-i p{
+  display: flex;
+  align-items: center;
+  width: 60%;
+  text-align: justify;
+  font-size: 2rem;
+  letter-spacing: .5spx;
+  line-height: 150%;
+}
+
+
+.project-title{
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-us {
+  text-align: center;
+}
+
+.contact-us h2 {
+    margin-bottom: 20px;
+}
+
+.contact-us form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    text-align: left;
+}
+
+
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.contact-us textarea {
+  resize: vertical;
+}
+
+.contact-us button {
+  background: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+  background-color: #332d8f;
+  color: #fdfff6;
+}
