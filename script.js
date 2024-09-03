@@ -1,39 +1,47 @@
-const allproject = document.querySelectorAll(".project");
-const previewImg = document.querySelector(".preview img");
+const header = document.querySelector(".site-header");
+const scrollWatch = document.createElement("div");
+const hireBtn = document.querySelector('.btn');
+const contact = document.querySelector(".contact")
+const closeBtn = document.querySelector(".close-btn")
+const overaly = document.querySelector(".overlay");
 
- window.addEventListener("mousemove", function (e) {
-   gsap.to(previewImg, {
-     x: e.clientX + "px",
-     y: e.clientY + "px",
-     xPercent: -80,
-     yPercent: -180,
-     stagger: 0.05,
-   });
- }); 
 
-allproject.forEach((ele) => {
-  ele.addEventListener("mouseenter", function () {
-    const imgUrl = this.getAttribute("data-img");
-    previewImg.src = imgUrl;
-    previewImg.style.opacity = 1;
-    previewImg.style.zIndex = 1;
-  });
-  ele.addEventListener("mouseleave", function () {
-    previewImg.removeAttribute("src");
-  });
-});
 
-//replaces yourElement's text with "This is the new text" over the course of 2 seconds
-gsap.to(".all-about-me", {
-  duration: 2,
-  text: "This is the new text",
-  ease: "none",
-});
-gsap.to(yourElement, {
-  duration: 1,
-  text: {
-    value: "Your new text",
-    newClass: "class2",
-    delimiter: " ",
-  },
-});
+
+scrollWatch.setAttribute("data-scroll-watch", '');
+header.before(scrollWatch);
+
+const newObserver = new IntersectionObserver((entries) =>{
+   header.classList.toggle("sticking", !entries[0].isIntersecting)
+}, {rootMargin: "0px 0px 0px 100px"})
+
+newObserver.observe(scrollWatch)
+function showModel(){
+   contact.classList.remove("hidden"); 
+   overaly.classList.remove("hidden");
+}
+
+function closeModel(){
+   contact.classList.add('hidden');
+   overaly.classList.add("hidden");
+}
+
+hireBtn.addEventListener('click', showModel); 
+closeBtn.addEventListener("click", closeModel); 
+
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+   const email = document.querySelector("#email").value;
+   const textarea = document.querySelector("#message").value;
+    Email.send({
+      SecureToken: " c5f56292-4573-4566-b81a-5cc5371cc8fd",
+      To: email,
+      From: "p.anant223@gmail.com",
+      Subject: "Important",
+      Body: textarea,
+    }).then((message) => alert(message));
+  }
+const emailBtn = document.querySelector("#email-btn");
+  emailBtn.addEventListener("click", sendEmail);
