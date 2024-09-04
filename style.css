@@ -8,6 +8,7 @@
   font-family: my-logo-font;
   src: url("./fonts/dr-sugiyama/DrSugiyama-Regular.ttf");
 }
+
 *{margin: 0;padding: 0;box-sizing:border-box;}
 body{
   margin: 0; 
@@ -16,6 +17,7 @@ body{
   scroll-behavior: smooth;
   background:#f9f9f9;
 }
+
 
 /* header-section */
 .site-header li, a{
@@ -27,7 +29,7 @@ body{
 .site-header{
   position: fixed;
   padding: 20px 120px;
-  font-size: medium;
+  font-size: large;
   width: 100%;
   max-width: 1750px;
   color: black;
@@ -42,11 +44,14 @@ body{
   background: #fff;
 }
 
+.logo,.nav-links,.hire-btn{
+  padding: 8px;
+}
+
 .logo{
   font-size: 2rem;
   font-weight: 100;
   font-family: my-logo-font;
-  padding: 4px;
 }
 
 .btn{
@@ -77,11 +82,8 @@ body{
   align-items: center;
   justify-content: center;
   font-size: medium;
-  padding: 2px;
 }
-.hire-btn{
-  padding: 2px;
-}
+
 .nav-links li{
   font-size: x-large;
 }
@@ -90,8 +92,8 @@ body{
 .main-layout{
   width: 100%;
   overflow: hidden;
-  min-height: 100vh;
-   font-family: "Comic Neue", cursive;
+  min-height: 80vh;
+  font-family: "Comic Neue", cursive;
 }
 /* hero-section */
 .hero-section,.about-section,.projects-section{
@@ -100,13 +102,6 @@ body{
   padding: 120px;
  
 }
-.hero-section{
-  width: 100%;
-  color: silver;
-  padding: 120px;
- 
-}
-
 .hero-wrapper{
   width: 100%;
   padding: 30px;
@@ -125,15 +120,15 @@ body{
 
 .intro-text h1{
   font-size: 24px;
-  padding: 0 40px;
+  padding: 8px 40px;
 }
 
 .social-contact{
-  padding: 0px 26px;
+  padding: 8px;
 }
 .icon svg{
-  width: 64px;  
-  padding: 12px;
+  width: 34px;  
+  padding: 12px 0;
   height: auto;
 }
 
@@ -141,29 +136,30 @@ body{
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0px 38px;
+  padding: 8px 40px;
 
 }
 
 #desc{
   font-size: 54px;
-  padding: 10px 40px 10px;
+  padding: 8px 40px;
   text-align: justify;
 }
 
-.projects-section {
-    text-align: center;
-}
 
-.projects-section h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #333;
+.projects-section h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  padding: 4px;
 }
 
 .projects-container {
-    display: flex;
-    gap: 20px;
+  padding: 4px 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .project-card {
@@ -172,7 +168,9 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 390px;
 }
+
 
 
 .project-card:hover {
@@ -186,31 +184,32 @@ body{
 }
 
 .project-card h3 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 1.5rem;
+  color: #333;
+  padding: 2px;
 }
 
 .project-card p {
     color: #777;
     font-size: 1rem;
-    margin: 10px 0;
+    padding: 2px;
+    text-align: justify;
 }
 
 .project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #000;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-    background-color: #000;
+  background-color: #000;
 }
 .used-tech{
   width: 100%;
@@ -222,31 +221,36 @@ body{
   color: black;
   font-weight: 900;
 }
+.used-tech p{
+  font-size: smaller;
+}
 .used-tech svg{
   width: 2vw;
 }
-
+.container{
+  padding: 0 30px;
+}
 
 .description{
-  padding: 0px 150px;
+  padding: 8px 150px;
 }
 
 .about-section {
-    /* padding: 40px 20px; */
-    /* margin: 20px 0; */
-    border-radius: 8px;
-  
+  border-radius: 8px;
 }
 
 .about-section h1, .about-section h2 {
-    margin-bottom: 20px;
+    padding: 8px;
     color: #000;
     text-align: center;
+    font-size: 2rem;
+
+    
 }
 
+
 .about-section .description {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -289,10 +293,7 @@ body{
 @media (max-width: 480px) {
    
 
-   
-
-   
-
+  
     .tech-stack li {
         font-size: 0.8em;
         padding: 6px 12px;
@@ -398,7 +399,7 @@ textarea {
 }
 
 
-@media (max-width:650px) {
+@media screen and (max-width:767px) {
   .site-header{
     padding: 14px 12px;
   }
@@ -425,7 +426,7 @@ textarea {
   #desc{
     font-size: 46px;
     text-align: left;
-    padding: 12px 34px 12px;
+    padding: 12px 34px;
   }
   .group-up{
     padding: 12px 34px;
@@ -434,22 +435,15 @@ textarea {
     padding: 0 25px;
   }
   .projects-section h2{
-    margin-bottom: 28px;
     font-size: 1.5rem;
   }
-  .projects-container{
-    display: block;
-  }
   .project-card{
-    margin: 12px;
+    /* margin: 12px; */
   }
   .used-tech svg{
     width: 6vw;
   }
-   .about-section h1, .about-section h2 {
-        font-size: 1.5rem;
-    }
-     .about-section .description {
+   .about-section h1, .about-section h2,.description{
         font-size: 1.5rem;
     }
   .description{
@@ -460,8 +454,60 @@ textarea {
   }
 }
 
-@media (max-width:1050px) {
+
+@media only screen and (min-width: 650px) and (max-width: 1023px) {
   .site-header{
     padding: 14px 12px;
+  }
+  .hero-section, .projects-section, .about-section{
+    padding: 38px 0px;
+  }
+  .hero-wrapper{
+    padding: 24px;
+  }
+  .intro-text h1{
+    font-size: 28px;
+    padding: 12px 34px;
+  }
+  #desc{
+    font-size: 56px;
+    text-align: left;
+    padding: 12px 34px;
+  }
+  .group-up{
+    padding: 12px 34px;
+  }
+  .social-contact{
+    padding: 0 25px;
+  }
+  .projects-section h2{
+    margin-bottom: 28px;
+  }
+  .projects-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-card{
+    width: 335px;
+
+  }
+  .used-tech svg{
+    width: 6vw;
+  }
+   
+  .about-section .description {
+    font-size: 1.5rem;
+  }
+  .description{
+    padding: 12px 34px;
+  }
+  .tech-stack{
+    padding: 14px 120px;
+  }
+  .used-tech{
+    font-size: small;
+  }
+  .used-tech svg{
+     width: 34vw;
   }
 }

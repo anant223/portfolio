@@ -33,18 +33,22 @@ closeBtn.addEventListener("click", closeModel);
 function sendEmail(e) {
   e.preventDefault();
 
-  const email = document.querySelector("#email").value;
-  const textarea = document.querySelector("#message").value;
-
-  Email.send({
-    SecureToken: "c5f56292-4573-4566-b81a-5cc5371cc8fd", // Removed extra space
-    To: email,
-    From: "p.anant223@gmail.com",
-    Subject: "Important",
-    Body: textarea,
-  })
-    .then((message) => alert("Email sent successfully: " + message))
-    .catch((error) => alert("Failed to send email: " + error));
+  const email = document.getElementById("email").value;
+  const textarea = document.getElementById("message").value;
+ console.log(email, textarea);
+      
+      
+   Email.send({
+     Host: "smtp.gmail.com",
+     Username: "p.anant223@gmail.com",
+     Password: "password",
+     To: "p.anant223@gmail.com",
+     From: email,
+     Subject: "New Message",
+     Body: textarea,
+   })
+     .then((message) => alert(message))
+     .catch((error) => alert("Failed to send email: " + error));
 }
 
 const emailBtn = document.querySelector("#email-btn");
