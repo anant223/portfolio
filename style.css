@@ -186,19 +186,18 @@ body{
 .project-card h3 {
   font-size: 1.5rem;
   color: #333;
-  padding: 2px;
+  padding: 8px;
 }
 
 .project-card p {
     color: #777;
     font-size: 1rem;
-    padding: 2px;
+    padding: 8px;
     text-align: justify;
 }
 
 .project-link {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
@@ -220,13 +219,26 @@ body{
   font-size: 24px;
   color: black;
   font-weight: 900;
+  padding: 8px;
+}
+
+.used-tech p{
+  font-size: small;
+}
+
+.used-tech svg{
+  height: 60px;
+  width: 32px;
+  padding: 2px;
 }
 .used-tech p{
-  font-size: smaller;
+  font-size: large;
 }
-.used-tech svg{
-  width: 2vw;
+
+.grouping-btn{
+  padding: 8px;
 }
+
 .container{
   padding: 0 30px;
 }
@@ -244,8 +256,6 @@ body{
     color: #000;
     text-align: center;
     font-size: 2rem;
-
-    
 }
 
 
@@ -437,9 +447,7 @@ textarea {
   .projects-section h2{
     font-size: 1.5rem;
   }
-  .project-card{
-    /* margin: 12px; */
-  }
+
   .used-tech svg{
     width: 6vw;
   }
@@ -455,7 +463,7 @@ textarea {
 }
 
 
-@media only screen and (min-width: 650px) and (max-width: 1023px) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
   .site-header{
     padding: 14px 12px;
   }
@@ -480,19 +488,13 @@ textarea {
   .social-contact{
     padding: 0 25px;
   }
-  .projects-section h2{
-    margin-bottom: 28px;
-  }
-  .projects-container{
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .project-card{
     width: 335px;
-
   }
-  .used-tech svg{
-    width: 6vw;
+  .project-card p{
+    font-size: smaller;
+    padding: 8px;
   }
    
   .about-section .description {
@@ -507,7 +509,8 @@ textarea {
   .used-tech{
     font-size: small;
   }
-  .used-tech svg{
-     width: 34vw;
+  .used-tech p{
+    font-size: larger;
   }
+ 
 }
